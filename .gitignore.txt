@@ -1,0 +1,7 @@
+node_modules/
+build/
+.cache/
+venv/
+__pycache__/
+*.pyc
+settings.db
