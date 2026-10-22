@@ -2,6 +2,12 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-@router.get("/health")
+
+@router.get("/")
+@router.get("")
 def health():
-    return {"status": "ok"}
+    return {
+        "status": "healthy",
+        "service": "EcoFog AI Backend",
+        "ml_engine": "RandomForestRegressor"
+    }

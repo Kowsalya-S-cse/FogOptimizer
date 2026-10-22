@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { User, Mail, Lock, Eye, EyeOff, LogIn, Activity } from "lucide-react";
+import { User, Mail, Lock, Eye, EyeOff, LogIn, Activity, Sparkles } from "lucide-react";
 
 /**
  * Modern Glassmorphism Login Page
@@ -16,11 +16,21 @@ const Login = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.username && formData.email && formData.password) {
-      // Logic for authentication would go here
       onLogin(true);
     } else {
       alert("Please fill in all credentials.");
     }
+  };
+
+  const handleDemoLogin = () => {
+    setFormData({
+      username: "Kowsalya S",
+      email: "kowsalya@fogoptimizer.ai",
+      password: "secure_admin_pass"
+    });
+    setTimeout(() => {
+      onLogin(true);
+    }, 200);
   };
 
   const handleChange = (e) => {
@@ -37,8 +47,8 @@ const Login = ({ onLogin }) => {
               <Activity size={40} color="var(--primary)" />
             </div>
           </div>
-          <h1>System Login</h1>
-          <p style={{ color: "var(--text-muted)" }}>Enter your credentials to access the Fog Dashboard</p>
+          <h1>EcoFog AI System</h1>
+          <p style={{ color: "var(--text-muted)" }}>Intelligent Fog Resource & QoS Optimizer</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -47,7 +57,7 @@ const Login = ({ onLogin }) => {
             <input
               type="text"
               name="username"
-              placeholder="Username"
+              placeholder="Username / Engineer ID"
               className="form-input login-input"
               value={formData.username}
               onChange={handleChange}
@@ -87,14 +97,41 @@ const Login = ({ onLogin }) => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary" style={{ width: "100%", marginTop: "1rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", padding: "1rem" }}>
-            <LogIn size={20} />
+          <button type="submit" className="btn btn-primary" style={{ width: "100%", marginTop: "1rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", padding: "0.85rem" }}>
+            <LogIn size={18} />
             <span>Authenticate Session</span>
           </button>
         </form>
 
-        <div style={{ marginTop: "2rem", textAlign: "center", fontSize: "0.875rem", color: "var(--text-muted)" }}>
-          Contact Administrator if you've lost access
+        {/* Instant Demo Login for Interviewers / HR */}
+        <div style={{ marginTop: "1rem" }}>
+          <button
+            type="button"
+            onClick={handleDemoLogin}
+            className="btn"
+            style={{
+              width: "100%",
+              background: "rgba(16, 185, 129, 0.15)",
+              color: "#34d399",
+              border: "1px solid rgba(16, 185, 129, 0.3)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+              padding: "0.75rem",
+              fontSize: "0.9rem",
+              fontWeight: "600",
+              cursor: "pointer",
+              borderRadius: "0.75rem"
+            }}
+          >
+            <Sparkles size={16} />
+            <span>⚡ Quick Demo Access</span>
+          </button>
+        </div>
+
+        <div style={{ marginTop: "1.5rem", textAlign: "center", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+          Developed for Intelligent Fog-Edge Resource Optimization
         </div>
       </div>
     </div>

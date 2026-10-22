@@ -18,7 +18,7 @@ class InputData(BaseModel):
 
 @router.post("/")
 async def predict(data: InputData, db: AsyncSession = Depends(get_db)):
-    result = run_prediction(data.dict())
+    result = run_prediction(data.model_dump())
 
     if "error" in result:
         return result

@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean, Float, DateTime
 from sqlalchemy.orm import declarative_base
-from datetime import datetime
+from datetime import datetime, timezone
 
 Base = declarative_base()
 
@@ -19,7 +19,7 @@ class SimulationRun(Base):
     __tablename__ = "simulation_runs"
 
     id = Column(Integer, primary_key=True, index=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     # Inputs
     fog_nodes = Column(Integer)

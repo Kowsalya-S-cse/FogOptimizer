@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+qos_frontend/node_modules/
+qos_frontend/build/
+build/
+.cache/
+.eslintcache
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/__pycache__/
+backend/*/__pycache__/
+venv/
+env/
+ENV/
+
+# Environment and IDE
+.env
+.env.local
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store

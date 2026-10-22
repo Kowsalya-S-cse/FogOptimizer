@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 # Existing routers
@@ -45,4 +45,20 @@ async def on_startup():
 
 @app.get("/")
 def root():
-    return {"status": "Fog Backend Running"}
+    return {
+        "status": "Fog Backend Running",
+        "version": "1.1",
+        "docs_url": "/docs",
+        "api": "FastAPI"
+    }
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    """Silences browser favicon requests cleanly with 204 No Content."""
+    return Response(status_code=204)
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)
