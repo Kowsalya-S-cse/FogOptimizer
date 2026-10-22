@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd qos_frontend && npm install && npm run build",
+  "outputDirectory": "qos_frontend/build",
+  "framework": "create-react-app",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
