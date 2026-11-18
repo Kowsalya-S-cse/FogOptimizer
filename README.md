@@ -6,10 +6,10 @@
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB.svg?style=flat&logo=python)](https://www.python.org)
 [![Scikit-Learn](https://img.shields.io/badge/ML-Scikit--Learn-F7931E.svg?style=flat&logo=scikit-learn)](https://scikit-learn.org)
 [![SQLite](https://img.shields.io/badge/Database-SQLite%20Async-003B57.svg?style=flat&logo=sqlite)](https://sqlite.org)
-[![Live Demo](https://img.shields.io/badge/Live%20App-Online-success.svg?style=flat&logo=googlechrome)](https://kowsalya-s-cse.github.io/FogOptimizer/)
+[![Live Demo](https://img.shields.io/badge/Live%20App-Online-success.svg?style=flat&logo=googlechrome)](https://fog-optimizer-y9yp.vercel.app/)
 [![Demo Video](https://img.shields.io/badge/Demo%20Video-Google%20Drive-4285F4.svg?style=flat&logo=googledrive)](https://drive.google.com/file/d/1-qmOzzXmVRjyCnccDYbi00EFC__S06dX/view?usp=drivesdk)
 
-> 🌐 **Live Web Application:** [Launch EcoFog AI Dashboard](https://kowsalya-s-cse.github.io/FogOptimizer/)  
+> 🌐 **Live Web Application:** [Launch EcoFog AI Dashboard](https://fog-optimizer-y9yp.vercel.app/)  
 > 🎥 **Project Video Demo:** [Watch the EcoFog AI Walkthrough on Google Drive](https://drive.google.com/file/d/1-qmOzzXmVRjyCnccDYbi00EFC__S06dX/view?usp=drivesdk)
 
 ---
